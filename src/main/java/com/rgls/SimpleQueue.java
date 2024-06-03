@@ -43,6 +43,11 @@ public class SimpleQueue {
 
     // Remove o primeiro elemento da fila, e diminui em um o index final
     public void rmvFirst() {
+        if (isEmpty()) {
+            System.out.println("Fila vazia");
+            return;
+        }
+
         for (int i = 0; i < lastIndex - 1; i++) {
             vector[i] = vector[i+1];
         }
@@ -53,6 +58,11 @@ public class SimpleQueue {
 
     // Remove todas as ocorrencias de um elemento
     public void rmvAllOccurencies(Integer elm){
+        if (isEmpty()) {
+            System.out.println("Fila vazia");
+            return;
+        }
+
         // Enquanto o método search retornar true, remove o primeiro elemento
         // pois indica que este elemento ainda está na fila
         while(search(elm)){
@@ -90,6 +100,11 @@ public class SimpleQueue {
 
     // Valor Máximo
     public Integer max(){
+        if (isEmpty()) {
+            System.out.println("Fila vazia");
+            return 0;
+        }
+
         Integer max = null;
 
         for (int i = 0; i < size; i++) {
@@ -105,6 +120,11 @@ public class SimpleQueue {
 
     // Valor Mínimo
     public Integer min(){
+        if (isEmpty()) {
+            System.out.println("Fila vazia");
+            return 0;
+        }
+
         Integer min = null;
 
         for (int i = 0; i < size; i++) {
@@ -120,6 +140,11 @@ public class SimpleQueue {
 
     // Retorna a média de todos os elementos
     public double average(){
+        if (isEmpty()) {
+            System.out.println("Fila vazia");
+            return 0;
+        }
+
         double sum = 0;
         int count = 0;
 
@@ -141,6 +166,11 @@ public class SimpleQueue {
 
     // Conta a quantidade de elementos diferentes de nulo na lista
     public int count(){
+        if (isEmpty()) {
+            System.out.println("Fila vazia");
+            return 0;
+        }
+
         int count = 0;
 
         for (int i = 0; i < size; i++) {
